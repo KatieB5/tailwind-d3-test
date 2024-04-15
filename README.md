@@ -1,8 +1,7 @@
-# React + Vite
+# Global family planning unmet needs
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
 
-Currently, two official plugins are available:
+This project was intiated to spike out using [tailwind css](https://tailwindcss.com/) and [D3.js](https://d3js.org/) to create an attractive frontend architecture that allows users to visualise data in an engaging way.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The topic idea came form searching for open data sets, and coming across those provided by the WHO. I have always had an interest in maternal and reproductive health, in pariticular, access tor eproductive care, to decided to utilize the "Family planning needs satisfied" data set found [here](https://apps.who.int/gho/data/view.main.FAMILYPLANNINGREGv?lang=en).

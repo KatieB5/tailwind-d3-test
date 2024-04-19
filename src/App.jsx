@@ -1,18 +1,21 @@
-import { useState } from 'react'
-import { Header } from './components/Header'
-import './App.css'
-import { Footer } from './components/Footer'
+import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import {HomePage} from './components/HomePage';
+
 
 function App() {
 
 
   return (
     <>
-      <div>
-        <Header/>
-        <Footer/>
-      </div>
-
+      <Header/>
+        <Routes>
+          <Route path="/" element={<HomePage />}/>
+        </Routes>
+      <Footer/>
     </>
   )
 }

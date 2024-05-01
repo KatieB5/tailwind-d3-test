@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react'
+import { Link } from "react-router-dom";
 import { Dialog, Popover, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
@@ -18,7 +19,7 @@ export const Header = () => {
     <header className="bg-white">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-            <img className="h-32 w-auto shadow rounded-lg align-middle border-none" src="../src/images/logo.png" alt="KatieB5"/>
+            <img className="h-28 w-auto shadow rounded-lg align-middle border-none" src="../src/images/logo.png" alt="KatieB5"/>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -43,10 +44,12 @@ export const Header = () => {
             >
             </Transition>
           </Popover>
-
-          <a href="#" className="bg-emerald-700 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
-            World map
-          </a>
+          <Link to={"/"} className="bg-emerald-700 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+            Home
+          </Link>
+          <Link to={"/abortionviews"} className="bg-emerald-700 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+            Abortion views
+          </Link>
           <a href="#" className="bg-emerald-700 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
             Individual country
           </a>
@@ -82,7 +85,7 @@ export const Header = () => {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <a
-                  href="#"
+                  href="/worldmap"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   World map

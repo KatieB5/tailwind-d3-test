@@ -9,7 +9,7 @@ import {
 
 export const ProjectExplanation = () => {
   return (
-    <div className="flex justify-center items-center p-10 font-serif">
+    <div className="flex justify-center items-center p-10 font-sans">
       <SimpleGrid columns={[2, null, 3]} spacing="40px">
         <Card bg="#dff7e6">
           <CardHeader className="text-emerald-500 font-serif">

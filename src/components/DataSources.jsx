@@ -17,7 +17,7 @@ export const DataSources = () => {
         mr={{ sm: "4" }}
       />
       <Stack>
-        <Heading size="md" className="text-emerald-700 font-serif">
+        <Heading size="md" className="text-emerald-700 font-sans">
           Data sources
         </Heading>
 

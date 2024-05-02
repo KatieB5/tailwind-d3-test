@@ -63,13 +63,13 @@ export const Header = () => {
             href="#"
             className="bg-emerald-700 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           >
-            Individual country
+            TBC
           </a>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
             href="#"
-            className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 flex items-center"
+            className="-mx-3 rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 flex items-center"
           >
             <UserCircleIcon className="h-5 w-5 mr-2" />
             <span>Log in</span> <span aria-hidden="true">&rarr;</span>
@@ -109,22 +109,22 @@ export const Header = () => {
                   href="/worldmap"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  World map
+                  Abortion views
                 </a>
                 <a
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Individual country
+                  TBC
                 </a>
               </div>
               <div className="py-6">
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 items-center"
+                  className="-mx-3 rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 flex items-center"
                 >
                   <UserCircleIcon className="h-5 w-5 mr-2" />
-                  Log in
+                  <span>Log in</span> <span aria-hidden="true">&rarr;</span>
                 </a>
               </div>
             </div>

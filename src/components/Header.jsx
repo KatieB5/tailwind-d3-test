@@ -1,25 +1,29 @@
-import { Fragment, useState } from 'react'
+import { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
-import { Dialog, Popover, Transition } from '@headlessui/react'
-import {
-  Bars3Icon,
-  XMarkIcon
-} from '@heroicons/react/24/outline';
-import { UserCircleIcon } from '@heroicons/react/24/solid'
-import '../images/logo.png';
+import { Dialog, Popover, Transition } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { UserCircleIcon } from "@heroicons/react/24/solid";
+import "../images/logo.png";
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="bg-white">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <nav
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
         <div className="flex lg:flex-1">
-            <img className="h-28 w-auto shadow rounded-lg align-middle border-none" src="../src/images/logo.png" alt="KatieB5"/>
+          <img
+            className="h-24 w-auto shadow rounded-lg align-middle border-none"
+            src="../src/images/logo.png"
+            alt="KatieB5"
+          />
         </div>
         <div className="flex lg:hidden">
           <button
@@ -41,35 +45,52 @@ export const Header = () => {
               leave="transition ease-in duration-150"
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
-            >
-            </Transition>
+            ></Transition>
           </Popover>
-          <Link to={"/"} className="bg-emerald-700 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+          <Link
+            to={"/"}
+            className="bg-emerald-700 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          >
             Home
           </Link>
-          <Link to={"/abortionviews"} className="bg-emerald-700 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+          <Link
+            to={"/abortionviews"}
+            className="bg-emerald-700 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          >
             Abortion views
           </Link>
-          <a href="#" className="bg-emerald-700 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+          <a
+            href="#"
+            className="bg-emerald-700 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          >
             Individual country
           </a>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 items-center">
+          <a
+            href="#"
+            className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 flex items-center"
+          >
             <UserCircleIcon className="h-5 w-5 mr-2" />
-            Log in <span aria-hidden="true">&rarr;</span>
+            <span>Log in</span> <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
       </nav>
-      <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+      <Dialog
+        as="div"
+        className="lg:hidden"
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+      >
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+              <span className="sr-only">KatieB5</span>
               <img
-                className="h-16 w-auto"
-                src="../src/images/logo.png" alt="KatieB5"
+                className="h-10 w-auto"
+                src="../src/images/logo.png"
+                alt="KatieB5"
               />
             </a>
             <button
@@ -98,10 +119,12 @@ export const Header = () => {
                 </a>
               </div>
               <div className="py-6">
-                <a href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 items-center">
-                    <UserCircleIcon className="h-5 w-5 mr-2" />
-                    Log in
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 items-center"
+                >
+                  <UserCircleIcon className="h-5 w-5 mr-2" />
+                  Log in
                 </a>
               </div>
             </div>
@@ -109,6 +132,5 @@ export const Header = () => {
         </Dialog.Panel>
       </Dialog>
     </header>
-  )
-}
-
+  );
+};

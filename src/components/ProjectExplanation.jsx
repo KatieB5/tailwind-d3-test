@@ -11,7 +11,7 @@ export const ProjectExplanation = () => {
   return (
     <div className="flex justify-center items-center p-10 font-serif">
       <SimpleGrid columns={[2, null, 3]} spacing="40px">
-        <Card>
+        <Card bg="#dff7e6">
           <CardHeader className="text-emerald-500 font-serif">
             <Heading size="md" className="font-serif">
               Why?
@@ -23,7 +23,7 @@ export const ProjectExplanation = () => {
             </Text>
           </CardBody>
         </Card>
-        <Card>
+        <Card bg="#dff7e6">
           <CardHeader className="text-emerald-500">
             <Heading size="md">What?</Heading>
           </CardHeader>
@@ -33,7 +33,7 @@ export const ProjectExplanation = () => {
             </Text>
           </CardBody>
         </Card>
-        <Card>
+        <Card bg="#dff7e6">
           <CardHeader className="text-emerald-500">
             <Heading size="md">Tech and tools</Heading>
           </CardHeader>

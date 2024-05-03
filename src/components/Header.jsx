@@ -1,9 +1,10 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Dialog, Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { UserCircleIcon } from "@heroicons/react/24/solid";
 import "../images/logo.png";
+import {CurrentUserContext} from "../contexts/User";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -11,6 +12,10 @@ function classNames(...classes) {
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const { currentUser, setCurrentUser } = useContext(CurrentUserContext);
+
+  console.log(currentUser);
 
   return (
     <header className="bg-white">
@@ -68,7 +73,7 @@ export const Header = () => {
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
-            href="#"
+            href="/login"
             className="-mx-3 rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 flex items-center"
           >
             <UserCircleIcon className="h-5 w-5 mr-2" />
@@ -120,7 +125,7 @@ export const Header = () => {
               </div>
               <div className="py-6">
                 <a
-                  href="#"
+                  href="/login"
                   className="-mx-3 rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 flex items-center"
                 >
                   <UserCircleIcon className="h-5 w-5 mr-2" />

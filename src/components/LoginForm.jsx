@@ -23,12 +23,17 @@ export default function LoginForm() {
             username: "",
             password: "",
           }}
-          onSubmit={(values) => {
-            alert(`Hi ${values.username} You have logged in!`);
+          onSubmit={(values, {resetForm}) => {
+            setCurrentUser({
+              username: values.username,
+              avatar_url:
+              "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+            })
+            resetForm();
           }}
-        >
+        resetForm >
           {({ handleSubmit, errors, touched }) => (
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} resetForm>
               <VStack spacing={4} align="flex-start">
                 <FormControl>
                   <FormLabel htmlFor="username">Username</FormLabel>

@@ -19,7 +19,7 @@ export const ProjectExplanation = () => {
           </CardHeader>
           <CardBody>
             <Text>
-              This project was initated to practice try some data visualization.
+              This project was initated to try and practice data visualization.
             </Text>
           </CardBody>
         </Card>
@@ -38,7 +38,7 @@ export const ProjectExplanation = () => {
             <Heading size="md">Tech and tools</Heading>
           </CardHeader>
           <CardBody>
-            <Text>React, Tailwind CSS, d3.js, Chakra UI.</Text>
+            <Text>React, Tailwind CSS, d3.js, Chakra UI, Formik.</Text>
           </CardBody>
         </Card>
       </SimpleGrid>

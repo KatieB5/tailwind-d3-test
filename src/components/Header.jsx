@@ -2,9 +2,8 @@ import { Fragment, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Dialog, Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { UserCircleIcon } from "@heroicons/react/24/solid";
 import "../images/logo.png";
-import {CurrentUserContext} from "../contexts/User";
+import { CurrentUserContext } from "../contexts/User";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -76,7 +75,13 @@ export const Header = () => {
             href="/login"
             className="-mx-3 rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 flex items-center"
           >
-            <UserCircleIcon className="h-5 w-5 mr-2" />
+            <div className="h-8 w-8 mr-2 bg-transparent text-emerald-500 border-2 border-emerald-500 rounded-full flex items-center justify-center">
+              <img
+                className="rounded-full"
+                src={currentUser.avatar_url}
+                alt="user profile picture"
+              />
+            </div>
             <span>Log in</span> <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
@@ -128,7 +133,13 @@ export const Header = () => {
                   href="/login"
                   className="-mx-3 rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 flex items-center"
                 >
-                  <UserCircleIcon className="h-5 w-5 mr-2" />
+                  <div className="h-8 w-8 mr-2 bg-transparent text-emerald-500 border-2 border-emerald-500 rounded-full p-1 flex items-center justify-center">
+                    <img
+                      className="rounded-full"
+                      src={currentUser.avatar_url}
+                      alt="user profile picture"
+                    />
+                  </div>
                   <span>Log in</span> <span aria-hidden="true">&rarr;</span>
                 </a>
               </div>

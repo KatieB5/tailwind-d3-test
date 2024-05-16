@@ -5,9 +5,8 @@ export const CurrentUserContext = createContext(null);
 export const CurrentUserProvider = ({children}) => {
     const [currentUser, setCurrentUser] = useState({
         username: null,
-        name: null,
         avatar_url:
-          null
+        "https://www.theyta.com/profiles/profile_placeholder.png"
       })
 
     return (

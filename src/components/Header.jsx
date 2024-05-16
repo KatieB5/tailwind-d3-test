@@ -14,7 +14,7 @@ export const Header = () => {
 
   const { currentUser, setCurrentUser } = useContext(CurrentUserContext);
 
-  console.log(currentUser);
+  // console.log(currentUser);
 
   return (
     <header className="bg-white">
